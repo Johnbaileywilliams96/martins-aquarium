@@ -1,7 +1,7 @@
 import { fishList } from './fishList.js'
 import { tipList } from './tipList.js';
 // import { tipList } from './tipList.js'
-// import { locationList } from './locationList.js'
+import { locationList } from './locationList.js'
 
 // Generate the fish list
 const fishHTML = fishList()
@@ -10,9 +10,27 @@ const tipsHTML = tipList()
 // const tipHTML = tipList()
 
 // Generate the location list
-// const locationHTML = locationList()
+const locationHTML = locationList()
 
 // Render each HTML string to the correct DOM element
+
+export const renderLocationListToDOM = (locationHTML) => {
+    const listOfLocations = document.getElementById("locationList");
+
+    if (listOfLocations) {
+        listOfLocations.innerHTML = locationHTML;
+    } else {
+        console.error('negative boss man')
+    }
+
+};
+renderLocationListToDOM(locationHTML)
+
+
+
+
+
+
 
 
 export const renderTipListToDOM = (tipsHTML) => {
