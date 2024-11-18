@@ -32,5 +32,14 @@ export const database = {
             diet: "kelp",
             image: "https://www.google.com/imgres?q=blowfish&imgurl=https%3A%2F%2Fsite-547756.mozfiles.com%2Ffiles%2F547756%2Fmedium%2FBlowfish.jpg&imgrefurl=https%3A%2F%2Fwww.earthandanimals.com%2Fadvocate%2Fwild-animals%2Fparams%2Fpost%2F1288331%2Fblowfish&docid=cvYzUPjempki4M&tbnid=27zIXUAXoB_y6M&vet=12ahUKEwj_sseajd-JAxVrSDABHZreLagQM3oECBUQAA..i&w=1152&h=765&hcb=2&ved=2ahUKEwj_sseajd-JAxVrSDABHZreLagQM3oECBUQAA"
         }
+    ],
+    tips: [
+        {
+            topic: "water Temperature",
+            text: "Maintain a consistent water temperature between 75-80°F (24-27°C) for most tropical fish."
+
+
+
+        },
     ]
 }
