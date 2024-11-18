@@ -1,18 +1,41 @@
 import { fishList } from './fishList.js'
 import { tipList } from './tipList.js';
-// import { tipList } from './tipList.js'
 import { locationList } from './locationList.js'
+import { mostHolyFish, soldierFish } from './Multiple Fish.js' 
+// import { database } from './aquariumData.js';
 
-// Generate the fish list
+const mostHolyFishHTML = mostHolyFish()
+const mostsoldierFishHTML = soldierFish()
+
+export const renderSoldierFish = (mostsoldierFishHTML) => {
+    const listOfSoldierFish = document.getElementById('fishDisplaySoldier');
+
+    if (listOfSoldierFish) {
+        listOfSoldierFish.innerHTML = mostsoldierFishHTML;
+    } else {
+        console.error('stupid')
+    }
+};
+renderSoldierFish(mostsoldierFishHTML)
+
+export const renderHolyFishHTML = (mostHolyFishHTML) => {
+    const listOfHolyFish = document.getElementById("fishDisplay");
+
+    if (listOfHolyFish) {
+        listOfHolyFish.innerHTML = mostHolyFishHTML;
+    } else {
+        console.error('no you stupid')
+    }
+
+};
+renderHolyFishHTML(mostHolyFishHTML)
+
+
 const fishHTML = fishList()
 const tipsHTML = tipList()
-// Generate the care tips
-// const tipHTML = tipList()
-
-// Generate the location list
 const locationHTML = locationList()
 
-// Render each HTML string to the correct DOM element
+
 
 export const renderLocationListToDOM = (locationHTML) => {
     const listOfLocations = document.getElementById("locationList");
@@ -25,12 +48,6 @@ export const renderLocationListToDOM = (locationHTML) => {
 
 };
 renderLocationListToDOM(locationHTML)
-
-
-
-
-
-
 
 
 export const renderTipListToDOM = (tipsHTML) => {
